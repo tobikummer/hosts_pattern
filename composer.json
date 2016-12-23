@@ -41,6 +41,11 @@
     "vendor-dir": ".Build/vendor",
     "bin-dir": ".Build/bin"
   },
+  "scripts": {
+    "post-autoload-dump": [
+      "if [ ! -d .Build/vendor/typo3/cms/components ]; then mkdir -p .Build/vendor/typo3/cms/components/testing_framework/core && ln -snvf ../../../typo3/sysext/core/Build .Build/vendor/typo3/cms/components/testing_framework/core/Build; fi"
+    ]
+  },
   "extra": {
     "typo3/cms": {
       "cms-package-dir": "{$vendor-dir}/typo3/cms",

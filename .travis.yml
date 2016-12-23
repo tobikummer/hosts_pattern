@@ -45,7 +45,7 @@ script:
    - >
      echo;
      echo "Running unit tests";
-     .Build/bin/phpunit -c .Build/vendor/typo3/cms/typo3/sysext/core/Build/UnitTests.xml Tests/Unit/
+     .Build/bin/phpunit -c .Build/vendor/typo3/cms/components/testing_framework/core/Build/UnitTests.xml Tests/Unit/
    - >
      echo;
      echo "Running php lint";
