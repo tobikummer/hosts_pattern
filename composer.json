@@ -30,7 +30,10 @@
   "autoload-dev": {
     "psr-4": {
       "IchHabRecht\\HostsPattern\\Tests\\": "Tests/",
-      "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/"
+      "TYPO3\\CMS\\Components\\TestingFramework\\Core\\": ".Build/vendor/typo3/cms/components/testing_framework/core/",
+      "TYPO3\\CMS\\Components\\TestingFramework\\Fluid\\": ".Build/vendor/typo3/cms/components/testing_framework/fluid/",
+      "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/components/testing_framework/compat/core/",
+      "TYPO3\\CMS\\Fluid\\Tests\\": ".Build/vendor/typo3/cms/components/testing_framework/compat/fluid/"
     }
   },
   "replace": {
@@ -39,7 +42,10 @@
   },
   "config": {
     "vendor-dir": ".Build/vendor",
-    "bin-dir": ".Build/bin"
+    "bin-dir": ".Build/bin",
+    "preferred-install": {
+      "typo3/cms": "source"
+    }
   },
   "scripts": {
     "post-autoload-dump": [
